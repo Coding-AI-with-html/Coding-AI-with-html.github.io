@@ -12,19 +12,23 @@
   table {
     table-layout: fixed;
   }
-    table,th,td {
-      border: 7px solid black;
-    border-collapse:collapse;
-    }
-    th,td {
-      padding:10px;
-    }
-    table#t1 {
-      background-color:#809fff;
-      position: absolute;
-    right: 75px;
-    top: 75px;
+  table#t0{
+  
+  }
 
+th,td {
+  background-color: green;
+}
+    table#t1 {
+      position: absolute;
+    right: 35px;
+    top: 75px;
+    border: 50px solid transparent;
+    padding: 0px;
+    border-image:  url(img.png) 45 stretch;
+    border-image-outset: 0px;
+    margin: 0px auto;
+    border-spacing: 0px;
     }
     table#t2 {
     visibility: hidden;
@@ -34,6 +38,7 @@
   top: 75px;
     }
     table#t3 {
+
       visibility: hidden;
       background-color: #993300;
       position: absolute;
@@ -41,6 +46,7 @@
     top: 75px;
     }
     table#t4 {
+
       visibility: hidden;
       background-color: #7a7a52;
       position: absolute;
@@ -56,34 +62,29 @@
     }
     table#t6 {
       visibility: hidden;
-      background-color: #006666;
+      background-color: #996633;
       position: absolute;
     right: 75px;
     top: 75px;
     }
     .button {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 10px;
-  cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer; }
+.button4 {border-radius: 12px;}
+th,tr,td {
+  border-style: ridge;
+  border-width: 7px;
+  border-color: #006666; }
+  th,td {
+        padding:5px;
+      }
   </style>
   <title> League of Legends information </title>
   <script language="javascript">
@@ -164,7 +165,44 @@ document.getElementById('t4').style.visibility = 'visible';
      document.getElementById('t6').style.visibility = 'hidden';
    }
  }
+function text1() {
+  document.getElementById("slr").style.color= "white";
+}
+function text2() {
+  document.getElementById("slr").style.color= "black";
+}
+function text3() {
+  document.getElementById("tnk").style.color= "white";
+}
 
+function text4() {
+  document.getElementById("tnk").style.color= "black";
+}
+function text5() {
+  document.getElementById("splc").style.color= "white";
+}
+function text6() {
+  document.getElementById("splc").style.color= "black";
+}
+
+function text7() {
+  document.getElementById("ctrl").style.color= "white";
+}
+function text8() {
+  document.getElementById("ctrl").style.color= "black";
+}
+function text9() {
+  document.getElementById("fgt").style.color= "white";
+}
+function text10() {
+  document.getElementById("fgt").style.color= "black";
+}
+function text11() {
+  document.getElementById("mag").style.color= "white";
+}
+function text12() {
+  document.getElementById("mag").style.color= "black";
+}
   </script>
 </head>
 <body>
@@ -173,26 +211,26 @@ document.getElementById('t4').style.visibility = 'visible';
 
   <table align="left" width="15%">
     <tr>
-<td> <img src="slayer.jpg" height="35"> <br/> <input type="button" value="Slayers" onclick="myfunction();"></td> </tr>
+<td> <img src="slayer.jpg" height="35"> <br/>  <input id="slr" class="button button4" type="button" value="Slayers"  onclick="myfunction();"  onmouseover="text1()" onmouseout="text2()"></td> </tr>
 </tr>
-<td align="center"> <img src="tank.jpg" height="35"> <br/>  <input type="button" class="button" value="Tanks" onclick="myfunction1();"> </td>
-</tr>
-<tr>
-  <td align="center"> <img src="specialist.png" height="35"> <br/> <input type='button' value="Specialists" onclick="myfunction2();"></td>
+<td align="center" bgcolor="brown"> <img src="tank.jpg" height="35"> <br/>  <input id="tnk" type="button" class="button button4" value="Tanks" onclick="myfunction1();" onmouseover="text3()" onmouseout="text4()"> </td>
 </tr>
 <tr>
-  <td align="center"> <img src="controller.png" height="35"> <br/> <input type="button" value="Controllers" onclick="myfunction3();"></td>
+  <td align="center"  bgcolor="brown"> <img src="specialist.png" height="35"> <br/> <input id="splc" type='button' class="button button4" value="Specialists" onclick="myfunction2();" onmouseover="text5()" onmouseout="text6()"></td>
 </tr>
 <tr>
-<td align="center"> <img src="Fighter.png" height="35"> <br/> <input type="button" value="Fighters" onclick="myfunction4();"> </td>
+  <td align="center"  bgcolor="brown"> <img src="controller.png" height="35"> <br/> <input id="ctrl" type="button" class="button button4" value="Controllers" onclick="myfunction3();" onmouseover="text7()" onmouseout="text8()"></td>
+</tr>
+<tr>
+<td align="center"  bgcolor="brown"> <img src="Fighter.png" height="35"> <br/> <input id="fgt" type="button" class="button button4" value="Fighters" onclick="myfunction4();" onmouseover="text9()" onmouseout="text10()"> </td>
 </tr>
   <tr>
-<td align="center"> <img src="mage.png" height="35"> <br/> <input type="button" value="Mages" onclick="myfunction5();"> </td>
+<td align="center"  bgcolor="brown"> <img src="mage.png" height="35"> <br/> <input id="mag" type="button" class="button button4" value="Mages" onclick="myfunction5();" onmouseover="text11()" onmouseout="text12()"> </td>
 </tr>
 
-    </table>
-<table align="center"  width="75%"  id="t1">
- <th colspan="8"> <font size="7" color="Blue"> <em> Assasins </em> </font> </th>
+</table>
+<table align="center"  width="75%"  id="t1" >
+ <th colspan="8"><div> <font size="7" color="Blue"> <em> Assasins </em> </font></div> </th>
 <tr>
   <td align="center" valign="center"> <img src="Akali.png" height="40"/> <br/>  <strong> <font size="5"  color="Blue"> Akali </font> </strong></td>
 <td align="center" valign="center"> <img src="zed.jfif" height="40"/> <br/> <strong> <font size="5"  color="Blue"> Zed </font> </strong></td>
@@ -238,60 +276,60 @@ document.getElementById('t4').style.visibility = 'visible';
 <td align="center" valign="center"> <img src="tankai/maokai.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Maokai</font> </strong></td>
 </tr>
 <tr>
-<td align="center" valign="center"> <img src="tankai/nautilus.jpg" height="40"> <br/> <strong> <font size="5"> Nautilus </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/nunu.jpg" height="40"> <br/> <strong> <font size="5"> Nunu </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/ornn.jpg" height="40"> <br/> <strong> <font size="5"> Ornn </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/rammus.jfif" height="40"> <br/> <strong> <font size="5"> Rammus </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/sejuani.jpg" height="40"> <br/> <strong> <font size="5"> Sejuani </font> </strong></td>
-<td align="center" valing="center"> <img src="tankai/sion.jpg" height="40"> <br/> <strong> <font size="5"> Sion </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/zac.jpg" height="40"> <br/> <strong> <font size="5"> Zac </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/nautilus.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Nautilus </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/nunu.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Nunu </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/ornn.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Ornn </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/rammus.jfif" height="40"> <br/> <strong> <font size="5" color="#006666"> Rammus </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/sejuani.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Sejuani </font> </strong></td>
+<td align="center" valing="center"> <img src="tankai/sion.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Sion </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/zac.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Zac </font> </strong></td>
 </tr>
 <th colspan="7"> <font size="7" color="#6600cc"> <em> Wardens</em> </font> </th>
 <tr>
-<td align="center" valign="center"> <img src="tankai/braum.jfif" height="40"> <br/> <strong> <font size="5"> Braum </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/cho.jpg" height="40"> <br/> <strong> <font size="5"> Cho'gath </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/galio.jpg" height="40"> <br/> <strong> <font size="5"> Galio </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/poppy.jpg" height="40"> <br/> <strong> <font size="5"> Poppy </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/shen.jfif" height="40"> <br/> <strong> <font size="5"> Shen </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/tahm.jfif" height="40"> <br/> <strong> <font size="5"> Tahm Kench </font> </strong></td>
-<td align="center" valign="center"> <img src="tankai/taric.jpg" height="40"> <br/> <strong> <font size="5"> Taric </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/braum.jfif" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Braum </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/cho.jpg" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Cho'gath </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/galio.jpg" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Galio </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/poppy.jpg" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Poppy </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/shen.jfif" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Shen </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/tahm.jfif" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Tahm Kench </font> </strong></td>
+<td align="center" valign="center"> <img src="tankai/taric.jpg" height="40"> <br/> <strong> <font size="5" color="#6600cc"> Taric </font> </strong></td>
 </tr>
 </table>
 <table align="center" width="75%" id="t3">
-  <th colspan="7"> <font size="7" color="#006666"> <em> Specialist </em> </font> </th>
+  <th colspan="7"> <font size="7" color="#538cc6"> <em> Specialist </em> </font> </th>
   <tr>
-<td align="center" valign="center"> <img src="specialist/azir.jpg" height="40"/> <br/>  <strong> <font size="5" color="#006666"> Azir </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/cho.jpg" height="40"/> <br/> <strong> <font size="5" color="#006666"> Cho'gath </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/fiddlesticks.jpg" height="40">  <br/> <strong> <font size="5" color="#006666"> Fiddlesticks </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/gangplank.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Gangplank </font> </strong></td>
-<td align="center"  valign="center"> <img src="specialist/gnar.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Gnar </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/graves.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Graves </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/heimerdinger.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Heimendinger</font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/azir.jpg" height="40"/> <br/>  <strong> <font size="5" color="#538cc6"> Azir </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/cho.jpg" height="40"/> <br/> <strong> <font size="5" color="#538cc6"> Cho'gath </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/fiddlesticks.jpg" height="40">  <br/> <strong> <font size="5" color="#538cc6"> Fiddlesticks </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/gangplank.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Gangplank </font> </strong></td>
+<td align="center"  valign="center"> <img src="specialist/gnar.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Gnar </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/graves.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Graves </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/heimerdinger.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Heimendinger</font> </strong></td>
 </tr>
 <tr>
-<td align="center" valign="center"> <img src="specialist/kayle.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Kayle </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/kennen.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Kennen </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/nidalee.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Nidalee </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/quinn.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Quinn </font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/singed.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Singed </font> </strong></td>
-<td align="center" valing="center"> <img src="specialist/temmo.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Temmo</font> </strong></td>
-<td align="center" valign="center"> <img src="specialist/zilean.jpg" height="40"> <br/> <strong> <font size="5" color="#006666"> Zac </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/kayle.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Kayle </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/kennen.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Kennen </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/nidalee.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Nidalee </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/quinn.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Quinn </font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/singed.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Singed </font> </strong></td>
+<td align="center" valing="center"> <img src="specialist/temmo.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Temmo</font> </strong></td>
+<td align="center" valign="center"> <img src="specialist/zilean.jpg" height="40"> <br/> <strong> <font size="5" color="#538cc6"> Zac </font> </strong></td>
 </table>
 <table align="center" width="75%" id="t4">
- <th colspan="5"> <font size="7" color="Teal"> <em> Catchers </em> </font> </th>
+ <th colspan="5"> <font size="7" color="#00cc99"> <em> Catchers </em> </font> </th>
 <tr>
-  <td align="center" valign="center"> <img src="controler/bard.jpg" height="40"/> <br/>  <strong> <font size="5" color="Teal"> Bard</font> </strong></td>
-<td align="center" valign="center"> <img src="controler/blitzrank.jpg" height="40"/> <br/> <strong> <font size="5" color="Teal"> Blitzrank </font> </strong></td>
- <td align="center" valign="center"> <img src="controler/ivern.jpg" height="40">  <br/> <strong> <font size="5" color="Teal"> Ivern </font> </strong></td>
- <td align="center" valign="center"> <img src="controler/jhin.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Jhin </font> </strong></td>
-<td align="center"  valign="center"> <img src="controler/lux.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Lux </font> </strong></td>
+  <td align="center" valign="center"> <img src="controler/bard.jpg" height="40"/> <br/>  <strong> <font size="5" color="#00cc99"> Bard</font> </strong></td>
+<td align="center" valign="center"> <img src="controler/blitzrank.jpg" height="40"/> <br/> <strong> <font size="5" color="#00cc99"> Blitzrank </font> </strong></td>
+ <td align="center" valign="center"> <img src="controler/ivern.jpg" height="40">  <br/> <strong> <font size="5" color="#00cc99"> Ivern </font> </strong></td>
+ <td align="center" valign="center"> <img src="controler/jhin.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Jhin </font> </strong></td>
+<td align="center"  valign="center"> <img src="controler/lux.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Lux </font> </strong></td>
 </tr>
 <tr>
-<td align="center" valign="center"> <img src="controler/morgana.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Morgana </font> </strong></td>
-<td align="center" valign="center"> <img src="controler/neeko.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Neeko </font> </strong></td>
-<td align="center" valign="center"> <img src="controler/rakan.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Rakan </font> </strong></td>
-<td align="center" valign="center"> <img src="controler/tresh.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Tresh </font> </strong></td>
-<td align="center" valign="center"> <img src="controler/zyra.jpg" height="40"> <br/> <strong> <font size="5" color="Teal"> Zyra </font> </strong></td>
+<td align="center" valign="center"> <img src="controler/morgana.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Morgana </font> </strong></td>
+<td align="center" valign="center"> <img src="controler/neeko.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Neeko </font> </strong></td>
+<td align="center" valign="center"> <img src="controler/rakan.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Rakan </font> </strong></td>
+<td align="center" valign="center"> <img src="controler/tresh.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Tresh </font> </strong></td>
+<td align="center" valign="center"> <img src="controler/zyra.jpg" height="40"> <br/> <strong> <font size="5" color="#00cc99"> Zyra </font> </strong></td>
 </tr>
 <th colspan="5"> <font size="7" color="#004d00"> <em> Enchanters</em> </th>
 <tr>
