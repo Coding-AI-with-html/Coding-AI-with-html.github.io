@@ -1,51 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <style>
-      table,th,td {
-        border: 7px solid black;
-      border-collapse:collapse;
-      }
-      th,td {
-        padding:10px;
-      }
-      table#t1 {
-        background-color:#809fff;
-      }
-    </style>
-  </head>
-  <body>
-    <table align="center" style="width:75%" id="t1">
-     <th colspan="5"> <font size="7" color="Blue"> <em> Catchers </em> </font> </th>
-    <tr>
-      <td align="center" valign="center"> <img src="bard.jpg" height="40"/> <br/>  <strong> <font size="5"> Bard</font> </strong></td>
-    <td align="center" valign="center"> <img src="blitzrank.jpg" height="40"/> <br/> <strong> <font size="5"> Blitzrank </font> </strong></td>
-     <td align="center" valign="center"> <img src="ivern.jpg" height="40">  <br/> <strong> <font size="5"> Ivern </font> </strong></td>
-     <td align="center" valign="center"> <img src="jhin.jpg" height="40"> <br/> <strong> <font size="5"> Jhin </font> </strong></td>
-    <td align="center"  valign="center"> <img src="lux.jpg" height="40"> <br/> <strong> <font size="5"> Lux </font> </strong></td>
-    </tr>
-    <tr>
-    <td align="center" valign="center"> <img src="morgana.jpg" height="40"> <br/> <strong> <font size="5"> Morgana </font> </strong></td>
-    <td align="center" valign="center"> <img src="neeko.jpg" height="40"> <br/> <strong> <font size="5"> Neeko </font> </strong></td>
-    <td align="center" valign="center"> <img src="rakan.jpg" height="40"> <br/> <strong> <font size="5"> Rakan </font> </strong></td>
-    <td align="center" valign="center"> <img src="tresh.jpg" height="40"> <br/> <strong> <font size="5"> Tresh </font> </strong></td>
-    <td align="center" valign="center"> <img src="zyra.jpg" height="40"> <br/> <strong> <font size="5"> Zyra </font> </strong></td>
-    </tr>
-    <th colspan="5"> <font size="7" color="#004d00"> <em> Enchanters</em> </th>
-    <tr>
-    <td align="center" valign="center"> <img src="senna.jpg" height="40"> <br/> <strong> <font size="5"> Senna </font> </strong></td>
-    <td align="center" valign="center"> <img src="Sona.jpg" height="40"> <br/> <strong> <font size="5"> Sona </font> </strong></td>
-    <td align="center" valign="center"> <img src="soraka.jpg" height="40"> <br/> <strong> <font size="5"> Soraka </font> </strong></td>
-    <td align="center" valing="center"> <img src="taric.jpg" height="40"> <br/> <strong> <font size="5"> Taric </font> </strong></td>
-    <td align="center" valign="center"> <img src="yuumi.jpg" height="40"> <br/> <strong> <font size="5"> Yuumi </font> </strong></td>
-    </tr>
-<tr>
-  <td align="center" valign="center"> <img src="zyra.jpg" height="40"> <br/> <strong> <font size="5"> Zyra </font> </strong></td>
-  <td align="center" valign="center"> <img src="janna.jpg" height="40"> <br/> <strong> <font size="5"> Janna </font> </strong></td>
-  <td align="center" valign="center"> <img src="lulu.jpg" height="40"> <br/> <strong> <font size="5"> Lulu</font> </strong></td>
-</tr>
-</table>
-  </body>
+<html>
+
+<head>
+	<title>
+		Audio autoplay property
+	</title>
+</head>
+
+<body style="text-align: center">
+
+	<h1 style="color: green">
+	GeeksforGeeks
+	</h1>
+	<h2 style="font-family: Impact">
+	Audio autoplay Property
+	</h2>
+	<br>
+
+	<audio id="Test_Audio"
+		controls autoplay>
+		<source src="blabla.ogg" type="audio/ogg"> 
+		<source src="blabla.mp3" type="audio/mpeg">
+	</audio>
+
+	<p>To know whether autoplay is enabled or not,
+	double click the "Return Autoplay Status" button.
+	</p>
+	<br>
+
+	<button ondblclick="My_Audio()">
+	Return Autoplay Status
+	</button>
+
+	<p id="test"></p>
+
+	<script>
+		function My_Audio() {
+			var a =
+			document.getElementById("Test_Audio").autoplay;
+			document.getElementById("test").innerHTML = a;
+		}
+	</script>
+
+</body>
+
 </html>
